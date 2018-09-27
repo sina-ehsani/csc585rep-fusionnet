@@ -1,7 +1,7 @@
 # FusionNet for Natural Language Inference
 
 This is an example for applying FusionNet to natural language inference task.  
-For more details on FusionNet, please refer to their paper:  
+For more details on FusionNet, please refer to Huang et al. paper:  
 [FusionNet: Fusing via Fully-Aware Attention with Application to Machine Comprehension](https://arxiv.org/abs/1711.07341)  
 
 Requirements
