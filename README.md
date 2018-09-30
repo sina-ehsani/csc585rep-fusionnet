@@ -56,10 +56,12 @@ Then use the Quick Start to run the program.
 
 Quick Start
 -----------
-`pip install -r requirements.txt`
-`bash download.sh`  
-`python prepro.py`  
-`python train.py`  
+```
+pip install -r requirements.txt
+bash download.sh  
+python prepro.py 
+python train.py
+```  
   
 `train.py` supports an option `--full_att_type`, where  
 `--full_att_type 0`: standard attention  
