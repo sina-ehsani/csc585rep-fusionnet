@@ -32,11 +32,11 @@ For the docker container, we used the container uploaded by the authors themself
 If you don't have docker containers, you can download the docker containers from [here](https://www.docker.com/community-edition#/download). 
 To enable GPU, [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) may also needs to be installed.  
 
-`docker pull momohuang/fusionnet-docker` to pull the docker file.
-`docker run -it momohuang/fusionnet-docker` (Only CPU)  
+`docker pull sinaehsani/sinafusionnet2` to pull the docker file.
+`docker run -it sinaehsani/sinafusionnet2` (Only CPU)  
 or  
-`nvidia-docker run -it momohuang/fusionnet-docker` (GPU-enabled).  
-Then use the Quick Start to run the program.
+`nvidia-docker run -it sinaehsani/sinafusionnet2` (GPU-enabled).  
+Then use the Quick Start to run the program. (if useing this method there is no need for the `pip install -r requirements.txt`) 
 
 
 
@@ -47,12 +47,18 @@ For a easier run on HPC systems (HPC systems do not support docker containers), 
 singularity pull shub://sinaehsani6/FusionNet-NLI
 singularity shell FusionNet-NLI
 ```
- 
+
+
+Or you can pull the docker image within the singularity (if useing this method there is no need for the `pip install -r requirements.txt`) use the following codes to pull the docker container on a HPC environment:
+```
+singularity pull docker://sinaehsani/sinafusionnet2
+singularity shell sinafusionnet2
+```
 Then use the Quick Start to run the program.
 
 Quick Start
 -----------
-`pip install -r requirements.txt`  
+`pip install -r requirements.txt`
 `bash download.sh`  
 `python prepro.py`  
 `python train.py`  
