@@ -5,7 +5,7 @@ For more details on FusionNet, please refer to Huang et al. paper:
 [FusionNet: Fusing via Fully-Aware Attention with Application to Machine Comprehension](https://arxiv.org/abs/1711.07341)  
 
 
-Three ways have been provided to run this program: (each is explained seperetly.)
+Three ways have been provided to run this program: (each is explained separatley.)
 1. Using the codes directly from GitHub repository.
 2. Using Docker container.
 3. Using Singularity Hub for HPC systems.
@@ -27,21 +27,19 @@ Then use the Quick Start to run the program.
 
 ### 2. Docker Container:
 
-For the docker container, we used the container uploaded by the authors themself:
-
-If you don't have docker containers, you can download the docker containers from [here](https://www.docker.com/community-edition#/download). 
-To enable GPU, [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) may also needs to be installed.  
+If you wan't to use the docker containers, you can download the docker containers from [here](https://www.docker.com/community-edition#/download). 
+To enable GPU, [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) may also need to be installed.  
 
 `docker pull sinaehsani/sinafusionnet2` to pull the docker file.
 `docker run -it sinaehsani/sinafusionnet2` (Only CPU)  
 or  
 `nvidia-docker run -it sinaehsani/sinafusionnet2` (GPU-enabled).  
-Then use the Quick Start to run the program. (if useing this method there is no need for the `pip install -r requirements.txt`) 
+Then use the Quick Start to run the program. (if using this method there is no need for the `pip install -r requirements.txt`) 
 
 
 
 ### 3. Singularity Hub:
-For a easier run on HPC systems (HPC systems do not support docker containers), a singularity hub is stablished for an easier use, to run the singularity hub, use the following codes:
+For an easier run on HPC systems (HPC systems do not support Docker containers), a singularity hub is established for an easier use, to run the singularity hub, use the following codes:
 
 ```
 singularity pull shub://sinaehsani6/FusionNet-NLI
@@ -49,7 +47,7 @@ singularity shell FusionNet-NLI
 ```
 
 
-Or you can pull the docker image within the singularity (if useing this method there is no need for the `pip install -r requirements.txt`) use the following codes to pull the docker container on a HPC environment:
+Or you can pull the docker image within the singularity (if using this method there is no need for the `pip install -r requirements.txt`) use the following codes to pull the docker container on an HPC environment:
 ```
 singularity pull docker://sinaehsani/sinafusionnet2
 singularity shell sinafusionnet2
